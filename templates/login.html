@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		form {
+			background-color: white;
+			padding: 20px;
+			width: 300px;
+			margin: auto;
+			margin-top: 50px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #999;
+		}
+		label, input {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], input[type="password"] {
+			padding: 5px;
+			width: 100%;
+			border-radius: 3px;
+			border: none;
+			box-shadow: 0px 0px 5px #999;
+			font-size: 16px;
+			color: #333;
+			font-family: Arial, sans-serif;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			margin-top: 10px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" >
+		{% csrf_token %}
+		<label for="username">Username</label>
+		<input type="text" id="username" name="username" placeholder="Enter your username">
+
+		<label for="password">Password</label>
+		<input type="password" id="password" name="password" placeholder="Enter your password">
+
+		<input type="submit" value="Login">
+	</form>
+</body>
+</html>
